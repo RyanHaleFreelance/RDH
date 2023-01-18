@@ -1,0 +1,33 @@
+@import "../../../src/scss/utils/variables";
+@import "../../../src/scss/utils/mixins";
+
+
+.colOffset {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $brand-color;
+        opacity: 0.6;
+        display: none;
+    }
+}
+
+.leftCol {
+    padding-right: 24.5px;
+}
+
+.twoColContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

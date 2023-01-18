@@ -1,0 +1,69 @@
+@import "../../../src/scss/utils/variables";
+@import "../../../src/scss/utils/mixins";
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100%;
+    margin-bottom: 40px;
+    text-decoration: none;
+    color: $color-text;
+    position: relative;
+    padding-bottom: 50px;
+    // background-color: #F4EBD9;
+    overflow: hidden;
+
+    &:hover {
+        text-decoration: none;
+        color: $color-text;
+
+        .readmore {
+            opacity: 1;
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+    @media screen and (min-width: $md) {
+        width: calc(50% - 20px);
+    }
+
+    @media screen and (min-width: $lg) {
+        width: calc(25% - 2px);
+        margin-bottom: 0;
+    }
+
+    &Image {
+        width: 100%;
+        height: 200px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &Text {
+        padding: 15px;
+
+        h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .readmore {
+            position: absolute;
+            left: 15px;
+            bottom: 15px;
+            width: 100%;
+            font-weight: 600;
+            opacity: 0;
+            transition: all 0.1s ease 0s;
+        }
+    }
+}

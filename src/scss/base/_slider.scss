@@ -1,0 +1,258 @@
+.slider-wrap {
+    display: flex;
+    
+    @include respond-min($md) {
+        padding-left: 30px;
+    }
+
+    .slide {
+        position: relative;
+        padding-bottom: 50px;
+
+        @include resp-max($md) {
+            padding-bottom: 30px;
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+
+        @include resp-max($md) {
+            justify-content: center;
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+
+.tns-outer {
+    position: relative;
+}
+
+button[data-action=stop],
+button[data-action=start] {
+    display: none;
+}
+
+.tns-controls {
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+        border: none;
+    }
+
+    button[data-controls=prev],
+    button[data-controls=next] {
+        text-indent: -9990px;
+        width: 35px;
+        transition: opacity .3s ease;
+        opacity:0.7;
+        position: absolute;
+        left: 5px;
+        height: 100%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: 3;
+
+        @include respond-min($md) {
+            left: 0;
+        }
+
+        &:before {
+            content: "";
+            background: url('https://dev-petted2.pantheonsite.io/wp-content/uploads/2022/11/icon-arrow-left.svg') no-repeat center center / 13px 25px;
+            width: 35px;
+            height: 35px;
+            display: block;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:disabled {
+            opacity: 0.4 !important;
+            cursor: not-allowed;
+        }
+    }
+
+    button[data-controls=next] {
+        margin-left: 10px;
+        position: absolute;
+        right: 5px;
+        left: auto;
+        transform: translateX(50%);
+
+        @include respond-min($md) {
+            right: 0;
+        }
+
+        &:before {
+            background-image: url('https://dev-petted2.pantheonsite.io/wp-content/uploads/2022/11/icon-arrow-right.svg');
+        }
+    }
+}
+
+.bg-alt {
+    button[data-controls=prev] {
+        background: rgb(246,245,255);
+        background: linear-gradient(90deg, rgba(246,245,255,1) 0%, rgba(246,245,255,0) 100%);
+    }
+    button[data-controls=next] {
+        background: rgb(246,245,255);
+        background: linear-gradient(90deg, rgba(246,245,255,0) 0%, rgba(246,245,255,1) 92%);
+    }
+}
+
+.testimonial-slider .tns-controls {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    width: 100px;
+    z-index: 5;
+
+    @include resp-max($md) {
+        bottom: auto;
+        right: 50%;
+        width: 100vw;
+        transform: translate(50%, 0);
+        display: flex;
+        justify-content: space-between;
+        top: 30px;
+    }
+
+    button[data-controls=prev],
+    button[data-controls=next] {
+        position: relative;
+        transform: none;
+        height: 35px;
+        left: auto;
+        right: auto;
+
+        &:before {
+            transform: none;
+            top: 0;
+            left: auto;
+            right: auto;
+        }
+    }
+}
+
+.insurerSliderContainer {
+    .tns-outer {
+        width: 100%;
+
+        @include respond-min($lg) {
+            overflow: hidden;
+        }
+    }
+
+    .tns-controls {
+        right: auto;  
+        width: 100vw;
+        /* background: rgba(0,0,0,0.5); */
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        z-index: 2;
+        height: 100%;
+        transform: translate(-50%,-50%);
+        pointer-events: none;
+
+        @include respond-min($lg) {
+            width: 100%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        button[data-controls=next],
+        button[data-controls=prev] {
+            position: absolute;
+            right: -1px;
+            height: 100%;
+            width: 20%;
+            background: rgb(246,245,255);
+            background: linear-gradient(90deg, rgba(246,245,255,0) 0%, rgba(246,245,255,1) 92%);
+            opacity: 1;
+            pointer-events: auto;
+            transform: none;
+
+            @include respond-min($lg) {
+                width: 10%;
+            }
+
+            &:before {
+                background-size: 14px 29px;
+                background-repeat: no-repeat; 
+                background-position: 70% center;
+                width: 100%;
+                height: 100%;
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-image: url('https://dev-petted2.pantheonsite.io/wp-content/uploads/2022/11/icon-arrow-right.svg');
+                transform: none;
+
+                @include respond-min($lg) {
+                    background-size: 34px 68px;
+                    background-position: 99% center;
+                }
+            }
+        }
+
+        button[data-controls=prev] { 
+            right: auto;
+            left: 0;
+            width: 20%;
+            background: rgb(246,245,255);
+            background: linear-gradient(90deg, rgba(246,245,255,1) 0%, rgba(246,245,255,0) 100%);
+
+            @include respond-min($lg) {
+                width: 10%;
+                // background: rgb(246,245,255);
+                // background: linear-gradient(90deg, rgba(246,245,255,1) 0%, rgba(246,245,255,0.3) 100%);
+            }
+
+            &:before {
+                background-image: url('https://dev-petted2.pantheonsite.io/wp-content/uploads/2022/11/icon-arrow-left.svg');
+                background-position: 30% center;
+
+                @include respond-min($lg) {
+                    background-position: 0% center;
+                }
+            }
+
+            &:disabled {
+                opacity: 0 !important;
+                pointer-events: none;
+            }
+        }
+    }
+    
+    .tns-ovh {
+        width: 70%;
+        overflow: visible;
+
+        @include respond-min($sm) {
+            width: 80%;
+            left: 10%;
+            position: relative;
+        }
+
+        @include resp-max($md) {
+            overflow: visible;
+            left: 50%;
+            position: relative;
+            transform: translateX(-50%);
+            margin-left: 10px;
+        }
+    }
+}
