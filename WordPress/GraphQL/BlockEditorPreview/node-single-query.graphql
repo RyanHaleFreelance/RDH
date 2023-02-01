@@ -2,6 +2,7 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
   blockEditorPreview(id: $id) {
     author {
       node {
+        __typename
         id
       }
     }
@@ -44,6 +45,7 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     contentType {
       node {
+        __typename
         id
       }
     }
@@ -61,6 +63,7 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     lastEditedBy {
       node {
+        __typename
         id
       }
     }
@@ -71,8 +74,8 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
     modifiedGmt
 
     previewed {
-      id
       __typename
+      id
     }
 
     previewedDatabaseId

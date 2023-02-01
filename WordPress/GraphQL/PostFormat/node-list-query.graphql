@@ -3,8 +3,8 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
     nodes {
       contentNodes(first: 100) {
         nodes {
-          id
           __typename
+          id
         }
       }
 
@@ -19,6 +19,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       posts(first: 100) {
         nodes {
+          __typename
           id
         }
       }
@@ -27,6 +28,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       taxonomy {
         node {
+          __typename
           id
         }
       }

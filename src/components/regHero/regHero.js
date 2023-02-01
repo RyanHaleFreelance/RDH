@@ -3,14 +3,14 @@ import * as Styles from './regHero.module.scss'
 import c from 'classnames'
 
 const Layout = ({ section, title }) => {
-	let enableFeatured = (section.featuredHero.enableFeaturedHero) ? section.featuredHero.enableFeaturedHero : false;
-	let pageTitle = (section.featuredHero.pageTitle) ? section.featuredHero.pageTitle : (title) ? title : section.title;
-	let nhhBG = (section.noneHomeHeader.nhhBackgroundImage) ? section.noneHomeHeader.nhhBackgroundImage.sourceUrl : false;
-	let nhhMobBG = (section.noneHomeHeader.nhhBackgroundImageMobile) ? section.noneHomeHeader.nhhBackgroundImageMobile.sourceUrl : false;
-	let nhhImg = (section.noneHomeHeader.nhhImage) ? section.noneHomeHeader.nhhImage.sourceUrl : false;
-	let nhhImgAlt = (section.noneHomeHeader.nhhImage) ? section.noneHomeHeader.nhhImage.altText : 'Petted image';
-	let nhhMoveImageDown = (section.noneHomeHeader.nhhMoveImageDown) ? section.noneHomeHeader.nhhMoveImageDown : false;
-	let altWave = (section.pageSettings.altHeaderWave) ? section.pageSettings.altHeaderWave : false;
+	let enableFeatured = false;
+	let pageTitle = 'test';
+	let nhhBG = false;
+	let nhhMobBG = false;
+	let nhhImg = false;
+	let nhhImgAlt = 'Petted image';
+	let nhhMoveImageDown = false;
+	let altWave = false;
 
 	const nhhStyle = `		
 	<style>

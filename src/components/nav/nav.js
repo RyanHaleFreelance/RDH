@@ -62,7 +62,7 @@ const DocsSidebar = ({ title }) => {
 				} 
 			})}
 		</ul>
-		<a href="https://quote.petted.com/quote/" target="_blank" className={c("btn", "btn--alt", Styles.headerMobileBtn)}>Get in touch</a>
+		<a href="https://quote.petted.com/quote/" target="_blank" className={c("btn-arrow", Styles.headerMobileBtn)}>Get in touch</a>
 	</div>
   )
 }

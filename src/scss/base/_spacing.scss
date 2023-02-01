@@ -13,7 +13,7 @@ html {
 
 body {
     position: relative;
-    background: white;
+    // background: white;
     z-index: 1;
 }
 
@@ -29,8 +29,8 @@ body {
     @extend %section;
     position: relative;
     width: 100%;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 
     &--no-pad {
         padding: 0 !important;

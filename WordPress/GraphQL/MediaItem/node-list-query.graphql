@@ -5,13 +5,14 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       ancestors(first: 100) {
         nodes {
-          id
           __typename
+          id
         }
       }
 
       author {
         node {
+          __typename
           id
         }
       }
@@ -22,8 +23,8 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       wpChildren: children(first: 100) {
         nodes {
-          id
           __typename
+          id
         }
       }
 
@@ -32,12 +33,14 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       comments(first: 100) {
         nodes {
+          __typename
           id
         }
       }
 
       contentType {
         node {
+          __typename
           id
         }
       }
@@ -57,6 +60,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       lastEditedBy {
         node {
+          __typename
           id
         }
       }
@@ -103,8 +107,8 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       wpParent: parent {
         node {
-          id
           __typename
+          id
         }
       }
 

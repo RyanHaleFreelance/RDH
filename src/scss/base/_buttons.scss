@@ -35,6 +35,37 @@
         }
     }
 
+    &-arrow {
+        color: $color-white;
+        font-weight: 300;
+        position: relative;
+        padding-right: 20px;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-white;
+            text-decoration: none;
+
+            &:after {
+                right: -3px;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 15px;
+            height: 100%;
+            background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/arrow-white.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transition: all 0.3s ease;
+        }
+    }
+
     &--alt {
         background: $brand-color;
         border-color: $brand-color;
@@ -57,14 +88,14 @@
 
     &--trans {
         background: transparent;
-        border: 2px solid $btn-bg;
+        border: 2px solid $color-white;
         border-radius: 30px;
-        color: $btn-bg;
+        color: $color-white;
 
         &:hover,
         &:focus {
-            color: $color-white;
-            background-color: $btn-bg;
+            color: $color-text;
+            background-color: $color-white;
         }
     }
 

@@ -5,6 +5,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       connectedContentTypes(first: 100) {
         nodes {
+          __typename
           id
         }
       }

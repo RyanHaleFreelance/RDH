@@ -33,17 +33,18 @@ const Layout = ({ data }) => {
 			<Headroom>
 				<div className={c(Styles.header)} id="main-header" role="banner">
 					<div className="container containerAlignCenter">
-						<div className="col col-xs-1-1 col-md-1-6">
-							<div className={Styles.brand}>
-								<a href="/" className={Styles.brandLogo}>
-									<img src="https://pockettraveller.co.uk/wp-content/uploads/2023/01/logo.svg" alt="Petted logo" className={'logo'} />
-									<img src="https://www.petted.com/wp-content/themes/petted/compiled/images/petted-logo-dark-alt.svg" alt="Petted logo" className={Styles.menuLogo} />
-								</a>
-							</div>
+						<div className="col col-xs-1-1 col-md-1-3">
 							<div className={Styles.hamburgerContainer}>
 								<button aria-label="Toggle mobile menu" className={Styles.hamburger} id="menu-toggle" onClick={toggleExpand}>
 									<span className={Styles.hamburgerBar}></span>
 								</button>
+							</div>
+						</div>
+						<div className="col col-xs-1-1 col-md-1-3">
+							<div className={Styles.brand}>
+								<a href="/" className={Styles.brandLogo}>
+									<img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/rdhlogo.svg" alt="Petted logo" className={'logo'} />
+								</a>
 							</div>
 						</div>
 						<nav role="navigation"className={c(Styles.header__nav, "col col-xs-1-1 col-md-5-6")}>

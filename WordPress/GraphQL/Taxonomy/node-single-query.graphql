@@ -4,6 +4,7 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     connectedContentTypes(first: 100) {
       nodes {
+        __typename
         id
       }
     }

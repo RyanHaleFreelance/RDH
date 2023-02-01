@@ -3,6 +3,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
     nodes {
       author {
         node {
+          __typename
           id
         }
       }
@@ -45,6 +46,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       contentType {
         node {
+          __typename
           id
         }
       }
@@ -62,6 +64,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       lastEditedBy {
         node {
+          __typename
           id
         }
       }
@@ -72,8 +75,8 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
       modifiedGmt
 
       previewed {
-        id
         __typename
+        id
       }
 
       previewedDatabaseId

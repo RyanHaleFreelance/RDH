@@ -3,6 +3,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
     nodes {
       author {
         node {
+          __typename
           id
         }
       }
@@ -44,6 +45,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       categories(first: 100) {
         nodes {
+          __typename
           id
         }
       }
@@ -53,6 +55,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       comments(first: 100) {
         nodes {
+          __typename
           id
         }
       }
@@ -61,6 +64,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       contentType {
         node {
+          __typename
           id
         }
       }
@@ -91,6 +95,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       lastEditedBy {
         node {
+          __typename
           id
         }
       }
@@ -103,6 +108,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       postFormats(first: 100) {
         nodes {
+          __typename
           id
         }
       }
@@ -143,6 +149,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       tags(first: 100) {
         nodes {
+          __typename
           id
         }
       }
@@ -155,8 +162,8 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       terms(first: 100) {
         nodes {
-          id
           __typename
+          id
         }
       }
 

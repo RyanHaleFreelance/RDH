@@ -33,7 +33,7 @@ const wpPost = ({data}) => {
 	let featured = data.allWpPost.edges;
 	let path = 'node';
 
-	if (data.wpPost.blogPost.postFeaturedArticles) {
+	if (data?.wpPost?.blogPost?.postFeaturedArticles) {
 		featured = data.wpPost.blogPost.postFeaturedArticles;
 		path = 'post';
 	}
@@ -111,7 +111,7 @@ const wpPost = ({data}) => {
 							
 						</div>
 						<div class="post__upper">
-							<div class="post__author-image">
+							{/* <div class="post__author-image">
 								<img src={data.wpPost.author.node.userOptions.customProfilePhoto.sourceUrl} alt={data.wpPost.author.node.name} />
 							</div>
 							<div class="post__author-name-date">    
@@ -120,7 +120,7 @@ const wpPost = ({data}) => {
 									<p>{data.wpPost.author.node.userOptions.jobTitle}</p>
 									<p>{data.wpPost.date}</p>
 								</div>
-							</div>
+							</div> */}
 							<div class="post__share">
 								<a href={`https://www.facebook.com/sharer/sharer.php?u=${shareurl}`} target="_blank">
 									<img src="https://www.petted.com/wp-content/uploads/2022/02/facebook.svg" alt="Facebook Icon" />
@@ -149,7 +149,7 @@ const wpPost = ({data}) => {
 				</div>
 			</article>
 		</main>
-        <Footer data={data.wp.acfOptionsFooter.footerOptions}></Footer>
+        {/* <Footer data={data.wp.acfOptionsFooter.footerOptions}></Footer> */}
     </div>
   )
 }

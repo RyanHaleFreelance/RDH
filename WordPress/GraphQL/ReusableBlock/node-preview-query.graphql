@@ -35,6 +35,7 @@ query PREVIEW_QUERY($id: ID!) {
 
     contentType {
       node {
+        __typename
         id
       }
     }
@@ -53,6 +54,7 @@ query PREVIEW_QUERY($id: ID!) {
 
     lastEditedBy {
       node {
+        __typename
         id
       }
     }

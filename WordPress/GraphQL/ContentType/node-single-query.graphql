@@ -5,14 +5,15 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     connectedTaxonomies(first: 100) {
       nodes {
+        __typename
         id
       }
     }
 
     contentNodes(first: 100) {
       nodes {
-        id
         __typename
+        id
       }
     }
 

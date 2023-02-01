@@ -34,18 +34,10 @@
 
 
 .brand {
-    max-width: 88px;
+    max-width: 50px;
     z-index: 11;
     position: relative;
-    @media(min-width: $md) {
-        width: 100px;
-        max-width: none;
-    }
-    @media(min-width: $lg) {
-        max-width: 100px;
-        width: auto;
-        padding: 0;
-    }
+    margin: 0 auto;
     &Logo,
     &Logo img {
         opacity: 1;
@@ -244,24 +236,8 @@
 }
 
 .hamburgerContainer {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 55px;
-    width: 55px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-white;
-    // border: 2px solid $brand-color;
-    filter: drop-shadow(0px 0px 2px $brand-color);
-    z-index: 11;
-    // margin: -13px 0 0;
-    // @media screen and (min-width: $navbreak) {
-    //     display: none;
-    // }
+    position: relative;
+    z-index: 100;
 }
 
 .hamburger {
@@ -292,13 +268,13 @@
 .hamburgerBar:after,
 .hamburgerBar:before {
     width: 28px;
-    height: 4px;
-    border-radius: 3px;
+    height: 1px;
+    border-radius: 2px;
 }
 
 .hamburgerBar {
     position: relative;
-    background: $brand-color;
+    background: $color-white;
     display: block;
     transition: all 0ms 300ms;
 }
@@ -307,8 +283,8 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: 9px;
-    background: $brand-color;
+    bottom: 8px;
+    background: $color-white;
     transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -316,7 +292,7 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 9px;
-    background: $brand-color;
+    top: 8px;
+    background: $color-white;
     transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }

@@ -2,20 +2,22 @@ query PREVIEW_QUERY($id: ID!) {
   category(id: $id, idType: ID, asPreview: true) {
     ancestors(first: 100) {
       nodes {
+        __typename
         id
       }
     }
 
     wpChildren: children(first: 100) {
       nodes {
+        __typename
         id
       }
     }
 
     contentNodes(first: 100) {
       nodes {
-        id
         __typename
+        id
       }
     }
 
@@ -30,6 +32,7 @@ query PREVIEW_QUERY($id: ID!) {
 
     wpParent: parent {
       node {
+        __typename
         id
       }
     }
@@ -39,6 +42,7 @@ query PREVIEW_QUERY($id: ID!) {
 
     posts(first: 100) {
       nodes {
+        __typename
         id
       }
     }
@@ -47,6 +51,7 @@ query PREVIEW_QUERY($id: ID!) {
 
     taxonomy {
       node {
+        __typename
         id
       }
     }

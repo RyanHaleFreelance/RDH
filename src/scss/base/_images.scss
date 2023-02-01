@@ -37,7 +37,7 @@ img {
         max-width: 100px;
 
         @include respond-min($md) {
-            max-height: 35px;
+            max-height: 50px;
             max-width: 122px;
         }
     }

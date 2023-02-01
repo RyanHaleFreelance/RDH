@@ -2,6 +2,7 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
   post(id: $id) {
     author {
       node {
+        __typename
         id
       }
     }
@@ -43,6 +44,7 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     categories(first: 100) {
       nodes {
+        __typename
         id
       }
     }
@@ -52,6 +54,7 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     comments(first: 100) {
       nodes {
+        __typename
         id
       }
     }
@@ -60,6 +63,7 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     contentType {
       node {
+        __typename
         id
       }
     }
@@ -90,6 +94,7 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     lastEditedBy {
       node {
+        __typename
         id
       }
     }
@@ -102,6 +107,7 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     postFormats(first: 100) {
       nodes {
+        __typename
         id
       }
     }
@@ -142,6 +148,7 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     tags(first: 100) {
       nodes {
+        __typename
         id
       }
     }
@@ -154,8 +161,8 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     terms(first: 100) {
       nodes {
-        id
         __typename
+        id
       }
     }
 

@@ -71,9 +71,14 @@ const WpPost = ({data}) => {
 	let pageurl = data.wpPage.uri;
 
 	let noContainer = '';
-
+	alert('page');
   return (
     <div>
+		<Helmet>
+			<link rel="preconnect" href="https://fonts.googleapis.com" />
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+			<link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet" />
+		</Helmet>
         <Layout data={data.wpPage.seo}></Layout>
 		{
 			(pageurl == '/') ?

@@ -4,13 +4,14 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     ancestors(first: 100) {
       nodes {
-        id
         __typename
+        id
       }
     }
 
     author {
       node {
+        __typename
         id
       }
     }
@@ -21,8 +22,8 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     wpChildren: children(first: 100) {
       nodes {
-        id
         __typename
+        id
       }
     }
 
@@ -31,12 +32,14 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     comments(first: 100) {
       nodes {
+        __typename
         id
       }
     }
 
     contentType {
       node {
+        __typename
         id
       }
     }
@@ -56,6 +59,7 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     lastEditedBy {
       node {
+        __typename
         id
       }
     }
@@ -102,8 +106,8 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
 
     wpParent: parent {
       node {
-        id
         __typename
+        id
       }
     }
 

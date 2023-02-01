@@ -2,14 +2,15 @@ query PREVIEW_QUERY($id: ID!) {
   menuItem(id: $id, idType: ID, asPreview: true) {
     childItems(first: 100) {
       nodes {
+        __typename
         id
       }
     }
 
     connectedNode {
       node {
-        id
         __typename
+        id
       }
     }
 
@@ -23,6 +24,7 @@ query PREVIEW_QUERY($id: ID!) {
 
     menu {
       node {
+        __typename
         id
       }
     }

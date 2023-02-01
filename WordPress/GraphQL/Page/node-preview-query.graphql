@@ -2,13 +2,14 @@ query PREVIEW_QUERY($id: ID!) {
   page(id: $id, idType: ID, asPreview: true) {
     ancestors(first: 100) {
       nodes {
-        id
         __typename
+        id
       }
     }
 
     author {
       node {
+        __typename
         id
       }
     }
@@ -50,8 +51,8 @@ query PREVIEW_QUERY($id: ID!) {
 
     wpChildren: children(first: 100) {
       nodes {
-        id
         __typename
+        id
       }
     }
 
@@ -60,6 +61,7 @@ query PREVIEW_QUERY($id: ID!) {
 
     comments(first: 100) {
       nodes {
+        __typename
         id
       }
     }
@@ -68,6 +70,7 @@ query PREVIEW_QUERY($id: ID!) {
 
     contentType {
       node {
+        __typename
         id
       }
     }
@@ -109,6 +112,7 @@ query PREVIEW_QUERY($id: ID!) {
 
     lastEditedBy {
       node {
+        __typename
         id
       }
     }
@@ -120,8 +124,8 @@ query PREVIEW_QUERY($id: ID!) {
 
     wpParent: parent {
       node {
-        id
         __typename
+        id
       }
     }
 

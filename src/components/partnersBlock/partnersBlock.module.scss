@@ -1,81 +1,56 @@
 @import "../../../src/scss/utils/variables";
 @import "../../../src/scss/utils/mixins";
 
-.threeCol {
+.textImageBlock {
+    background: hsla(214, 63%, 14%, 1);
+    background: radial-gradient(circle, rgb(19, 30, 37) 0%, rgb(19, 30, 37) 100%);
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-    &Wrapper {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+.leftCol {
+    background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/alexander-park-K1w7nSy9xY8-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-        @media(min-width: $lg) {
-            justify-content: space-between;
-        }
-    }
+.logo {
+    display: block;
+}
 
-    &Title {
-        text-align: center;
-        margin-bottom: 60px;
+.textBlockWrap {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(19,20,22,0.4);
+    position: relative;
+}
 
-        h2 {
-            @include font-size(25);
-            margin-bottom: 0px;
-            color: $base-color;
+.rightCol {
+    padding: 100px 40px;
+    position: relative;
 
-            @media(min-width: $md) {
-                @include font-size(30);
-            }
-
-            @media(min-width: $lg) {
-                @include font-size(30);
-            }
-        }
-    }
-
-    &Column {
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
-        margin-bottom: 60px;
+        height: 100%;
+        background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/tina-dawson-Kim9COAIEGc-unsplash.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+    }
+}
 
-        @media(min-width: $md) {
-            width: calc(50% - 40px);
-            margin: 0 20px 40px;
-        }
+.leftCol, 
+.rightCol {
+    width: 100%;
+    margin: 0;
 
-        @media(min-width: $lg) {
-            width: calc(33.3333% - 40px);
-            margin: 0;
-        }
-
-        &Image {
-            width: 100%;
-            max-width: 150px;
-            margin: 0 auto;
-            margin-bottom: 20px;
-        }
-
-        &Title {
-            text-align: center;
-
-            h3 {
-                @include font-size(20);
-                margin-bottom: 15px;
-
-                @media(min-width: $md) {
-                    @include font-size(20);
-                }
-
-                @media(min-width: $lg) {
-                    @include font-size(20);
-                }
-            }
-        }
-
-        &Text {
-            text-align: center;
-
-            h1,h2,h3,h4,h5,h6,p,span {
-                margin-bottom: 0;
-            }
-        }
+    @include respond-min($md) {
+        width: 50%;
     }
 }

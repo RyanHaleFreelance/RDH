@@ -3,20 +3,22 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
     nodes {
       ancestors(first: 100) {
         nodes {
+          __typename
           id
         }
       }
 
       wpChildren: children(first: 100) {
         nodes {
+          __typename
           id
         }
       }
 
       contentNodes(first: 100) {
         nodes {
-          id
           __typename
+          id
         }
       }
 
@@ -31,6 +33,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       wpParent: parent {
         node {
+          __typename
           id
         }
       }
@@ -40,6 +43,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       posts(first: 100) {
         nodes {
+          __typename
           id
         }
       }
@@ -48,6 +52,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       taxonomy {
         node {
+          __typename
           id
         }
       }

@@ -37,8 +37,8 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       commentedOn {
         node {
-          id
           __typename
+          id
         }
       }
 
@@ -51,6 +51,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       wpParent: parent {
         node {
+          __typename
           id
         }
       }
@@ -60,6 +61,7 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
 
       replies(first: 100) {
         nodes {
+          __typename
           id
         }
       }

@@ -245,10 +245,6 @@
     top: 25px;
     z-index: 1;
     font-size: 16px;
-    padding: 5px 20px;
-    background-color: $color-white;
-    color: $brand-color;
-    border: none;
 
     @include respond-min($md) {
         right: 40px;
