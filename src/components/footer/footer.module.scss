@@ -6,4 +6,18 @@
     border-top: 2px solid $color-white;
     padding-top: 40px;
     padding-bottom: 40px;
+
+    .logo {
+        width: 100%;
+        max-width: 50px;
+        margin-bottom: 20px;
+    }
+
+    &Logo {
+        p,a {
+            margin-bottom: 0;
+            font-size: 12px;
+            color: $color-white;
+        }
+    }
 }

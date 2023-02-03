@@ -1924,9 +1924,9 @@ li.headerBtn {
 }
 .headroom--pinned {
     transform: translateY(0%) !important;
-    background-color: rgba($brand-color, 0.5) !important;
+    background-color: rgba(19,20,22,0.5) !important;
     transition: transform 200ms linear, background-color 0.2s ease 0s !important;
-    height: 115px !important;
+    height: 80px !important;
 }
 .headroom--unpinned {
     transform: translateY(-120%) !important;
@@ -2211,4 +2211,12 @@ body .carousel.carousel-slider {
     &:before {
         content: 'Personal' !important;
     }
+}
+
+.hs-form-iframe {
+    width: 100%;
+}
+
+#hubspotForm {
+    width: 100%;
 }

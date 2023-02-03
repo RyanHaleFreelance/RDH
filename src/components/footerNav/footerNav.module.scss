@@ -7,31 +7,9 @@
     text-align: left;
     list-style-type: none;
     margin: 0;
-
-    @include respond-min($lg) {
-        margin-top: 0;
-        text-align: left;
-        column-count: 2;
-        max-width: 250px;
-    }
-
-    > li {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-
-        @include respond-min($md) {
-            width: auto;
-        }
-
-        @include respond-min($lg) {
-            margin-left: 0;
-        }
-
-        &:last-child {
-            border: none;
-        }
-    }
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
 
     li ul {
         list-style-type: none;
@@ -41,12 +19,12 @@
     li {
         margin-left: 0;
         font-family: $base-font-family;
-        width: auto;
+        width: 50%;
     }
 
     a {
-        font-size: 10px;
-        color: $base-color;
+        font-size: 14px;
+        color: $color-white;
         font-weight: 300;
         display: block;
         margin-bottom: 8px;
@@ -57,29 +35,7 @@
         
         &:hover, &:focus {
             text-decoration: underline;
-            color: $base-color;
-        }
-    }
-}
-
-.navSec {
-    margin-top: 0;
-    display: flex;
-    justify-content: center;
-
-    @include respond-min($lg) {
-        margin-top: 0;
-        margin-left: $sp-unit;
-        text-align: right;
-    }
-
-    li {
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 10px !important;
-
-        @include respond-min($sm) {
-            margin-bottom: 0 !important;
+            color: $color-white
         }
     }
 }
