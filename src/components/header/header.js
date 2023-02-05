@@ -29,8 +29,7 @@ const Layout = ({ data }) => {
 	}
 
 	return (
-		<div className='overflow'>
-			<Headroom>
+		<div>
 				<div className={c(Styles.header)} id="main-header" role="banner">
 					<div className="container containerAlignCenter">
 						<div className="col col-xs-1-1 col-md-1-3">
@@ -53,7 +52,6 @@ const Layout = ({ data }) => {
 						</nav>
 					</div>
 				</div>
-			</Headroom>
 		</div>
 	)
 }
