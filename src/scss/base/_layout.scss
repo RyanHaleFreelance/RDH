@@ -1212,7 +1212,9 @@ body {
 }
 
 .shadow {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    @include respond-min($md) {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
 }
 .jc-sb {
     justify-content: space-between;
@@ -2219,4 +2221,46 @@ body .carousel.carousel-slider {
 
 #hubspotForm {
     width: 100%;
+}
+
+.card4 {
+    .cards-module--cardImage--501cc {
+        bottom: 0;
+        left: 0;
+
+        img {
+            width: 40%;
+        }
+    }
+}
+
+
+.card2 {
+    .cards-module--cardImage--501cc {
+        bottom: -35px;
+        left: 0;
+        text-align: center;
+
+        img {
+            width: 70%;
+        }
+    }
+}
+
+.icon {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
 }

@@ -6,7 +6,7 @@ import * as Styles from './formBlock.module.scss'
 
 const Layout = ({ image }) => {
 	return (
-		<div className={c(Styles.form, 'container', 'full')}>
+		<div id="contact" className={c(Styles.form)}>
 			<Helmet>
 				<script src="https://js-eu1.hsforms.net/forms/v2.js"></script>
 				<script>
@@ -28,6 +28,10 @@ const Layout = ({ image }) => {
 			<div className={c('section', Styles.twoColContent)}>
 				<div className={c('container', 'full', 'jc-sb', 'shadow')}> 
 					<div className={c(Styles.leftCol, 'leftColHelper')}>
+						<div className='redUnder'>
+							<h3>Leave us a message</h3>
+						</div>
+						<p>Seen something you like? use the form below and we will get back to you as soon as we can!</p>
 						<div id="hubspotForm"></div>
 					</div>
 					<div className={c(Styles.colOffset, 'rightColHelper')} style={{ backgroundImage: `url('${image}')`}}>

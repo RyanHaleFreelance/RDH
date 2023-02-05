@@ -2,10 +2,10 @@ import * as React from 'react'
 import * as Styles from './twoColumn.module.scss'
 import c from 'classnames'
 
-const Layout = ({ title, image, content, link, linkText, flip }) => {
+const Layout = ({ title, image, content, link, linkText, flip, id }) => {
 
 	return (
-		<div className={c('section', Styles.twoColContent)}>
+		<div id={id} className={c('section', Styles.twoColContent)}>
 			<div className={c('container', 'full', {'flex-reverse': flip == 1}, 'jc-sb', 'shadow')}> 
 				<div className={c(Styles.leftCol, 'leftColHelper')}>
 					<div className={c('redUnder')}>

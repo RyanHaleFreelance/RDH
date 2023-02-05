@@ -21,8 +21,7 @@
         padding-right: ​40px;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
         color: $btn-bg;
         text-decoration: none;
         background-color: transparent;
@@ -72,8 +71,7 @@
         color: $color-white;
         position: relative;
 
-        &:hover,
-        &:focus {
+        &:hover{
             color: #fff;
             background-color: $btn-bg;
             border-color: $btn-bg;
@@ -92,8 +90,7 @@
         border-radius: 30px;
         color: $color-white;
 
-        &:hover,
-        &:focus {
+        &:hover {
             color: $color-text;
             background-color: $color-white;
         }

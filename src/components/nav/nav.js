@@ -30,39 +30,42 @@ const DocsSidebar = ({ title }) => {
     }
   `)
 
+  function closeNav() {
+	let nav = document.querySelector('.nav-module--nav--b7415');
+	let html = document.querySelector('html');
+
+	if(nav.classList.contains('navActive')) {
+	  nav.classList.remove('navActive');
+	  html.classList.remove('menuOpen');
+	}
+  }
+
   const [mobExpanded, setMobExpanded] = useState(false);
   const toggleMobExpand = () => setMobExpanded(!mobExpanded);
 
   return (
 	<div className={Styles.menuHeaderMenuContainer}>	
 		<ul id="main-nav" className={c(Styles.nav, Styles.navHeader)}>
-			{wpMenu.menuItems.nodes.map((menuItem, i) => {
-				const path = menuItem?.connectedNode?.node?.uri ?? menuItem.url
-				const itemId = "menu-item-" + menuItem.databaseId
-				if (menuItem.parentId) {
-					return null;
-				} 
-
-				if (!menuItem.parentId && menuItem.childItems.nodes.length > 0) {
-					const children = menuItem.childItems.nodes;
-					return <li id={itemId} key={i + menuItem.url} className={c(Styles.menuItem, Styles.menuItemTypeCustom, Styles.menuItemObjectCustom, Styles.menuItemHasChildren, menuItem.cssClasses, {'open': mobExpanded == true})}><a className={c(Styles.menuLink, Styles.subMenuLink)} href={path} onClick={toggleMobExpand}>{menuItem.label}</a>
-						<ul className={Styles.subMenu}>
-							{ 
-								children.map((item) =>
-									<li id={item.databaseId} key={i + item.url} className={c(Styles.menuItem, Styles.menuItemTypeCustom, Styles.menuItemObjectCustom, item.cssClasses)}><a className={c(Styles.menuLink, Styles.subMenuLink)} href={item.url}>{item.label}</a></li>
-								)
-							}
-						</ul>
-						<button className={c('dropdown-toggle', Styles.dropdownToggle)} onClick={toggleMobExpand}>Expand Menu Item</button>
-					</li>;
-				} 
-
-				if (!menuItem.parentId) {
-					return <li id={itemId} key={i + menuItem.url} className={c(Styles.menuItem, menuItem.cssClasses)}><a className={c(Styles.menuLink, Styles.subMenuLink)} href={path}><div dangerouslySetInnerHTML={{__html: menuItem.label}}></div></a></li>;
-				} 
-			})}
+			<li className={c(Styles.menuItem)}>
+				<a className={c(Styles.menuLink, Styles.subMenuLink)} onClick={closeNav} href="#">Home</a>
+			</li>
+			<li className={c(Styles.menuItem)}>
+				<a className={c(Styles.menuLink, Styles.subMenuLink)} onClick={closeNav} href="#what-we-do">About Us</a>
+			</li>
+			<li className={c(Styles.menuItem)}>
+				<a className={c(Styles.menuLink, Styles.subMenuLink)} onClick={closeNav} href="#cards">Our Values</a>
+			</li>
+			<li className={c(Styles.menuItem)}>
+				<a className={c(Styles.menuLink, Styles.subMenuLink)} onClick={closeNav} href="#clients">Our Work</a>
+			</li>
+			<li className={c(Styles.menuItem)}>
+				<a className={c(Styles.menuLink, Styles.subMenuLink)} onClick={closeNav} href="#quote">Get a quote</a>
+			</li>
+			<li className={c(Styles.menuItem)}>
+				<a className={c(Styles.menuLink, Styles.subMenuLink)} onClick={closeNav} href="#contact">Contact</a>
+			</li>
 		</ul>
-		<a href="https://quote.petted.com/quote/" target="_blank" className={c("btn-arrow", Styles.headerMobileBtn)}>Get in touch</a>
+		<a href="#quote" className={c("btn-arrow", Styles.headerMobileBtn)}>Get a quote</a>
 	</div>
   )
 }

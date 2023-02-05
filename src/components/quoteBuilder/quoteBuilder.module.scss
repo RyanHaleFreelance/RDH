@@ -1,0 +1,66 @@
+@import "../../../src/scss/utils/variables";
+@import "../../../src/scss/utils/mixins";
+
+.quote {
+    width: 100%;
+    padding: 30px;
+    background: hsla(214, 63%, 14%, 1);
+    background: radial-gradient(circle, rgb(19, 30, 37) 0%, rgb(19, 30, 37) 100%);
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/tina-dawson-Kim9COAIEGc-unsplash.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+        pointer-events: none;
+    }
+}
+
+.quoteInnerItems {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media(min-width: $breakpoint-md) {
+        margin: 0 -20px;
+    }
+}
+
+.quoteItem {
+    display: block;
+    border: 4px solid $color-white;
+    border-radius: 10px;
+    width: 100%;
+    padding: 40px;
+    margin-bottom: 40px;
+
+    @media(min-width: $breakpoint-md) {
+        width: calc(50% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    @media(min-width: $breakpoint-lg) {
+        width: calc(33.33333% - 40px);
+    }
+    
+    p,h4 {
+        margin: 0;
+    }
+
+    h4 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}

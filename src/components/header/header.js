@@ -43,7 +43,7 @@ const Layout = ({ data }) => {
 						<div className="col col-xs-1-1 col-md-1-3">
 							<div className={Styles.brand}>
 								<a href="/" className={Styles.brandLogo}>
-									<img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/rdhlogo.svg" alt="Petted logo" className={'logo'} />
+									<img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/logo-outlined.svg" alt="Petted logo" className={'logo'} />
 								</a>
 							</div>
 						</div>

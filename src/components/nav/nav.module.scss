@@ -154,7 +154,7 @@
         &.noLink,
         >a {
             display: block;
-            color: $color-text;
+            color: #000;
             text-shadow: none;
             font-size: 30px;
             width: 100%;
@@ -203,41 +203,6 @@
     }
 }
 
-.nav-sec {
-    list-style: none;
-    margin: 0;
-
-    > li {
-        display: inline-block;
-        margin: 0 15px;
-        vertical-align: top;
-    }
-}
-
-.header {
-    .nav-sec {
-        font-size: 0.75em;
-        margin: 0;
-        position: relative;
-        top: -10px;
-        display: none;
-        li {
-            position: relative;
-        }
-        a {
-            font-weight: bold;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-    &.headroom--not-top.headroom--pinned {
-        .nav-sec {
-            display: none;
-        }
-    }
-}
 
 .headerMobileBtn {
     position: absolute;

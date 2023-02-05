@@ -11,7 +11,7 @@ const Layout = ({ data }) => {
 				<div className="col col-xs-1-1 col-md-1-3">
 					<div className={Styles.footerLogo}>
 						<a href="#">
-							<img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/rdhlogo.svg" alt="Petted logo" className={Styles.logo} />
+							<img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/logo-outlined.svg" alt="Petted logo" className={Styles.logo} />
 						</a>
 						<p><strong>Copyright 2023 RDH Digital Ltd</strong></p>
 						<p>Company Number: 14419844</p>
@@ -21,15 +21,9 @@ const Layout = ({ data }) => {
 				<div className="col col-xs-1-1 col-md-1-3">
 					<FooterNav></FooterNav>
 				</div>
-				<div className="col col-xs-1-1 col-md-1-3">
-					<a href="https://www.facebook.com/rdhbackend/" target="_blank" rel="noopener noreferrer" className={Styles.socialLink}>
-						<img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/facebook.svg" alt="Facebook" />
-					</a>
-					<a href="https://www.instagram.com/rdhbackend/" target="_blank" rel="noopener noreferrer" className={Styles.socialLink}>
-						<img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/instagram.svg" alt="Instagram" />
-					</a>
+				<div className={c('col col-xs-1-1 col-md-1-3', Styles.third)}>
 					<a href="https://www.linkedin.com/company/rdhbackend/" target="_blank" rel="noopener noreferrer" className={Styles.socialLink}>
-						<img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/linkedin.svg" alt="LinkedIn" />
+						<img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/linkedin.svg" alt="LinkedIn" />
 					</a>
 				</div>
 			</div>

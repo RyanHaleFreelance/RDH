@@ -47,17 +47,17 @@ const Layout = ({ section, title, ratings }) => {
 						<div className={Styles.heroNumbers}>
 							<p><span id="current">01</span>/03</p>
 						</div>
-						<h1 className={Styles.pageHeaderTitle}><div class="redUnder redUnderEdit">Level up</div> your <br/>business</h1>
-						<h2>RDH Digital is a leading innovator in creating <br/>award-winning digital experiences.</h2>
-						<a href="#" className="btn btn--trans btn--small">Let's Chat</a>
+						<h1 className={Styles.pageHeaderTitle}>Building innovative websites <br/>that drive business <div class="redUnder redUnderEdit">success.</div></h1>
+						<h2>RDH Digital is a leading innovator in creating award-winning digital <br/>experiences that boost conversion rates and drive sales.</h2>
+						<a href="#contact" className="btn btn--trans btn--small">Let's Chat</a>
 					</div>
 					<div className={c('col', 'col-lg-1-1', Styles.headerWrap)}>
 						<div className={Styles.heroNumbers}>
 							<p><span id="current">02</span>/03</p>
 						</div>
-						<h2 className={Styles.pageHeaderTitle}>Your users will<br/><div class="redUnder redUnderEdit">thank you</div></h2>
-						<h3 className={Styles.actash2}>Fine tune your site's user experience to <br/>increase conversion rates and drive sales.</h3>
-						<a href="#" className="btn btn--trans btn--small">Let's Chat</a>
+						<h2 className={Styles.pageHeaderTitle}>Fine tune your site and keep<br/>your customers <div class="redUnder redUnderEdit">coming back.</div></h2>
+						<h3 className={Styles.actash2}>Let us design your user experience to make your users' experience a breeze. <br/>Happy customers equals more sales!</h3>
+						<a href="#contact" className="btn btn--trans btn--small">Let's Chat</a>
 					</div>
 					<div className={c('col', 'col-lg-1-1', Styles.headerWrap)}>
 						<div className={Styles.heroNumbers}>
@@ -65,12 +65,12 @@ const Layout = ({ section, title, ratings }) => {
 						</div>
 						<h2 className={Styles.pageHeaderTitle}>Signed, sealed and<br/>delivered. <div class="redUnder redUnderEdit">Securely.</div></h2>
 						<h3 className={Styles.actash2}>We use the latest tech to provide a seamless, safe experience <br/>for you and your user. Your brand's reputation is our brands reputation.</h3>
-						<a href="#" className="btn btn--trans btn--small">Let's Chat</a>
+						<a href="#contact" className="btn btn--trans btn--small">Let's Chat</a>
 					</div>
 				</Carousel>
 				<div className={Styles.slidesWrap}>
 					<div className={Styles.scroll}>
-						<button className={Styles.prompt}>
+						<a href="#what-we-do" className={Styles.prompt}>
 							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="40.05px" height="35.69px" viewBox="-8.369 -3.009 40.05 35.69" enable-background="new -8.369 -3.009 40.05 35.69" className={Styles.svgScroll}>
 								<g>
 									<path d="M12.406,32.394l7.6-7.601l0,0l11.301-11.2c0.5-0.5,0.5-1.199,0-1.699l-2.301-2.301c-0.5-0.5-1.199-0.5-1.699,0l-14.9,14.9
@@ -92,7 +92,7 @@ const Layout = ({ section, title, ratings }) => {
 									L7.436,4.72l0,0l3.795,3.795C11.431,8.764,11.831,8.764,12.031,8.565"/>
 								</g>
 							</svg>
-						</button>
+						</a>
 					</div>
 					<div className={Styles.slides}>
 						<a href="javascript:void(0);" onClick={() => goTo(0)} className={c(Styles.slide, Styles.slide1,  {'hide': slideOne == true})}>

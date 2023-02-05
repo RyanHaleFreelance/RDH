@@ -20,15 +20,15 @@
     }
 
     &.slideOne {
-        background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/flower-lg-scaled.jpg');
+        background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/daniel-korpai-HyTwtsk8XqA-unsplash-1.jpg');
     }
 
     &.slideTwo {
-        background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/fair-lg.jpg');
+        background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/smartmockups_ldrhbx0k.jpg');
     }
 
     &.slideThree {
-        background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/sparkles-large.jpg');
+        background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/petter-lagson-z-upQITw4fY-unsplash.jpg');
     }
 
     .pageChild &,
@@ -190,8 +190,9 @@
             font-weight: 700;
 
             @include respond-min($lg) {
-                font-size: 60px;
+                font-size: 45px;
             }
+
 
             span {
                 position: relative;
@@ -278,7 +279,7 @@
             flex-wrap: wrap;
             display: flex;
             align-items: center;
-            background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/flowersmall.jpg');
+            background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/daniel-korpai-HyTwtsk8XqA-unsplash.jpg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -289,11 +290,11 @@
             overflow: hidden;
 
             &.slide2 {
-                background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/fairsmall.jpg');
+                background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/smartmockups_ldrhea8r.jpg');
             }
 
             &.slide3 {
-                background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/sparklessmall.jpg');
+                background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/petter-lagson-z-upQITw4fY-unsplash-1.jpg');
             }
 
             &:before {

@@ -2,17 +2,20 @@
 @import "../../../src/scss/utils/mixins";
 
 .textImageBlock {
-    background: hsla(214, 63%, 14%, 1);
-    background: radial-gradient(circle, rgb(19, 30, 37) 0%, rgb(19, 30, 37) 100%);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .leftCol {
-    background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/01/alexander-park-K1w7nSy9xY8-unsplash.jpg');
-    background-position: center;
+    background-image: url('https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/smartmockups_ldrfkosm.jpg');
+    background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 300px;
+
+    @include respond-min($md) {
+        padding-bottom: 0;
+    }
 }
 
 .logo {
@@ -27,8 +30,10 @@
 }
 
 .rightCol {
-    padding: 100px 40px;
+    padding: 50px 30px;
     position: relative;
+    background: hsla(214, 63%, 14%, 1);
+    background: radial-gradient(circle, rgb(19, 30, 37) 0%, rgb(19, 30, 37) 100%);
 
     &:before {
         content: '';
@@ -42,6 +47,10 @@
         background-size: cover;
         background-repeat: no-repeat;
         opacity: 0.1;
+    }
+
+    @include respond-min($md) {
+        padding: 100px 40px;
     }
 }
 

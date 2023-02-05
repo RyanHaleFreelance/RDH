@@ -21,3 +21,23 @@
         }
     }
 }
+
+.third {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.socialLink {
+    width: 100%;
+    max-width: 50px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    img {
+        width: 100%;
+    }
+}
