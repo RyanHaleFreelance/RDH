@@ -50,7 +50,7 @@ const Layout = ({ section, images }) => {
 							<p>We offer a bespoke and personal experience to you and your needs. We understand not everyone is cut out of the same mould!</p>
 							{/* <p className={Styles.readmore}>Build your quote</p> */}
 						</div>
-						<div className={Styles.cardImage}><img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/Subject-2.png"/></div>
+						<div className={Styles.cardImage}><img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/Subject-3-min.png"/></div>
 						<div className={c(Styles.innerWrapper, 'cardInnerWrapper')}></div>
 					</a>
 				</div>
