@@ -8,22 +8,7 @@ const Layout = ({ image }) => {
 	return (
 		<div id="contact" className={c(Styles.form)}>
 			<Helmet>
-				<script src="https://js-eu1.hsforms.net/forms/v2.js"></script>
-				<script>
-					{`
-					setTimeout(() => {
-						window.hbspt.forms.create({
-							region: "eu1",
-							portalId: "26918753",
-							formId: "436a8927-9199-4941-95c5-bc073c77681f",
-							target: '#hubspotForm'
-						});
-					}, 1000);
-					setTimeout(() => {
-						document.querySelector('.hs-form-iframe').contentDocument.body.innerHTML = document.querySelector('iframe').contentDocument.body.innerHTML + '<style>.sproket {display:none !important;} h1,h2,h3,h4,h5,h6,p,span,div,input,textarea {color: white !important;} .hs-button{padding: 10px 36px !important; display: inline-block !important; color: white !important; background: #BA1B1D !important; border: 2px solid #BA1B1D !important; font-size: 14px !important; font-weight: 600 !important; text-decoration: none !important; text-align: center !important; border-radius: 20px !important; position: relative !important; transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out !important;}.hs-button:hover{color:#BA1B1D !important; background-color:transparent!important;}</style>';
-					}, 3000);
-					`}
-				</script>
+				<link href="https://d2p078bqz5urf7.cloudfront.net/jsapi/css/engagebay-source-forms-min.v01.css" rel="stylesheet" />
 			</Helmet>
 			<div className={c('section', Styles.twoColContent)}>
 				<div className={c('container', 'full', 'jc-sb', 'shadow')}> 
@@ -32,7 +17,44 @@ const Layout = ({ image }) => {
 							<h3>Leave us a message</h3>
 						</div>
 						<p>Seen something you like? use the form below and we will get back to you as soon as we can!</p>
-						<div id="hubspotForm"></div>
+						<div class="engage-bay-source-form engagebay-forms" data-id="5699013368610816">
+							<form class="form form-style-form1 default" onsubmit="window.EhForm.submit_form(event,this)" data-id="5699013368610816"> 
+								<fieldset> 
+									<div class="form-group"> 
+									<label class="control-label" for="name"><p>First Name</p> <span class="text-danger">*</span></label> 
+										<div class="controls"> 
+											<input data-ebay_field="name" data-ebay_add_as="" id="name" title="" name="name" type="text" placeholder="Enter your first name" class="form-control" required="true" /> 
+										</div> 
+									</div>  
+									<div class="form-group"> 
+										<label class="control-label" for="last_name"><p>Last Name</p> </label> 
+										<div class="controls"> 
+											<input data-ebay_field="last_name" data-ebay_add_as="" id="last_name" title="" name="last_name" type="text" placeholder="Enter your last name" class="form-control" /> 
+										</div> 
+									</div>  
+									<div class="form-group"> 
+										<label class="control-label" for="email"><p>Email</p> <span class="text-danger">*</span></label> 
+										<div class="controls"> 
+											<input data-ebay_field="email" data-ebay_add_as="" id="email" title="" name="email" type="email" placeholder="Enter your email" class="form-control" required="true" /> 
+										</div> 
+									</div>  
+									<div class="form-group"> 
+									<label class="control-label" for="eb_temp_field_text_box"><p>Message</p> </label> 
+										<div class="controls"> 
+											<textarea rows="3" data-ebay_field="" data-ebay_add_as="-- Select --" id="eb_temp_field_text_box" name="eb_temp_field_text_box" type="textarea" placeholder="Enter your message here" class="form-control"></textarea> 
+										</div> 
+									</div> 
+									<div class="form-group"> 
+										<div> 
+											<button data-ebay_field="" data-ebay_add_as="-- Select --" type="submit" class="btn--important"><p>Submit</p></button> 
+											<br />
+											<span id="error-msg"></span> 
+										</div> 
+									</div> 
+								</fieldset> 
+								<div class="error-success-container"></div> 
+							</form> 
+						</div>
 					</div>
 					<div className={c(Styles.colOffset, 'rightColHelper')} style={{ backgroundImage: `url('${image}')`}}>
 					

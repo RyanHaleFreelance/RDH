@@ -2264,3 +2264,37 @@ body .carousel.carousel-slider {
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: 'liga';
 }
+
+body .container {
+    .engage-bay-source-form {
+        font-family: $base-font-family !important;
+
+        form {
+            background-color: transparent !important;
+            box-shadow: none !important;
+
+            fieldset {
+                padding: 0 !important;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .form-group {
+                    width: 100%;
+
+                    &:nth-of-type(1), &:nth-of-type(2) {
+                        width: calc(50% - 10px);
+                    }
+
+                    &:last-of-type {
+                        text-align: left;
+                    }
+                }
+
+                label,p,input,textarea {
+                    font-family: $base-font-family !important;
+                }
+            }
+        }
+    }
+}
