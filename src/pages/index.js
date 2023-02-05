@@ -23,6 +23,16 @@ const WpPost = ({data}) => {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+		<title>Building innovative websites that drive business success. | RDH Digital</title>
+		<meta name="description" content="Elevate your online presence with our expert web development services. From custom website design to seamless functionality, we bring your vision to life." />
+  		<meta name="keywords" content="HTML, CSS, JavaScript, Web Development, Leeds, Web Development Leeds, Web Design, Web Design Leeds, Web, Design, development, SEO, SEO Leeds, SEO Services" />
+		<meta name="author" content="Ryan Hale" />
+		<link rel="apple-touch-icon" sizes="180x180" href="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/favicon-32x32-1.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/favicon.ico" />
+		<link rel="mask-icon" href="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff"></meta>
       </Helmet>
         <Layout data={data.wpPage.seo}></Layout>
 		{

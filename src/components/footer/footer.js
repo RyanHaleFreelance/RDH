@@ -22,7 +22,7 @@ const Layout = ({ data }) => {
 					<FooterNav></FooterNav>
 				</div>
 				<div className={c('col col-xs-1-1 col-md-1-3', Styles.third)}>
-					<a href="https://www.linkedin.com/company/rdhbackend/" target="_blank" rel="noopener noreferrer" className={Styles.socialLink}>
+					<a href="https://www.linkedin.com/company/rdh-digital/" target="_blank" rel="noopener noreferrer" className={Styles.socialLink}>
 						<img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/linkedin.svg" alt="LinkedIn" />
 					</a>
 				</div>
