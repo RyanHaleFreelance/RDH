@@ -16,7 +16,7 @@ img {
 
 .partner-logo {
     padding: 0 8px;    
-    width: 33%;
+    width: 50%;
     text-align: center;
     opacity: 1;
     transition: opacity .3s ease;
@@ -29,6 +29,10 @@ img {
         padding: 15px;    
         height: 70px;
         transition: opacity .5s ease; 
+    }
+
+    @include respond-min($lg) {
+        width: 33%;
     }
 
     a, img {

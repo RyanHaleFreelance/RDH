@@ -182,12 +182,16 @@
 .home {
     &.pageHeader {
         h1, h2.pageHeaderTitle {
-            font-size: 40px;
+            font-size: 25px;
             line-height: 1.1;
             position: relative;
             display: inline-block;
             margin-bottom: 10px;
             font-weight: 700;
+
+            @include respond-min($md) {
+                font-size: 35px;
+            }
 
             @include respond-min($lg) {
                 font-size: 45px;

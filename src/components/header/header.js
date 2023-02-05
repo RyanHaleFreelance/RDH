@@ -29,7 +29,7 @@ const Layout = ({ data }) => {
 	}
 
 	return (
-		<div>
+		<div className='overflow'>
 			<Headroom>
 				<div className={c(Styles.header)} id="main-header" role="banner">
 					<div className="container containerAlignCenter">
