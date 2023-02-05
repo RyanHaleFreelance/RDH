@@ -30,28 +30,28 @@ const Layout = ({ data }) => {
 
 	return (
 		<div>
-				<div className={c(Styles.header)} id="main-header" role="banner">
-					<div className="container containerAlignCenter">
-						<div className="col col-xs-1-1 col-md-1-3">
-							<div className={Styles.hamburgerContainer}>
-								<button aria-label="Toggle mobile menu" className={Styles.hamburger} id="menu-toggle" onClick={toggleExpand}>
-									<span className={Styles.hamburgerBar}></span>
-								</button>
-							</div>
+			<div className={c(Styles.header)} id="main-header" role="banner">
+				<div className="container containerAlignCenter">
+					<div className="col col-xs-1-1 col-md-1-3">
+						<div className={Styles.hamburgerContainer}>
+							<button aria-label="Toggle mobile menu" className={Styles.hamburger} id="menu-toggle" onClick={toggleExpand}>
+								<span className={Styles.hamburgerBar}></span>
+							</button>
 						</div>
-						<div className="col col-xs-1-1 col-md-1-3">
-							<div className={Styles.brand}>
-								<a href="/" className={Styles.brandLogo}>
-									<img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/logo-outlined.svg" alt="Petted logo" className={'logo'} />
-								</a>
-							</div>
-						</div>
-						<nav role="navigation"className={c(Styles.header__nav, "col col-xs-1-1 col-md-5-6")}>
-							<div className={Styles.menuBg}></div>
-							<Nav></Nav>
-						</nav>
 					</div>
+					<div className="col col-xs-1-1 col-md-1-3">
+						<div className={Styles.brand}>
+							<a href="/" className={Styles.brandLogo}>
+								<img src="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/logo-outlined.svg" alt="Petted logo" className={'logo'} />
+							</a>
+						</div>
+					</div>
+					<nav role="navigation"className={c(Styles.header__nav, "col col-xs-1-1 col-md-5-6")}>
+						<div className={Styles.menuBg}></div>
+						<Nav></Nav>
+					</nav>
 				</div>
+			</div>
 		</div>
 	)
 }
