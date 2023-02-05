@@ -18,7 +18,7 @@ const Layout = ({ image }) => {
 						</div>
 						<p>Seen something you like? use the form below and we will get back to you as soon as we can!</p>
 						<div class="engage-bay-source-form engagebay-forms" data-id="5699013368610816">
-							<form class="form form-style-form1 default" onsubmit="window.EhForm.submit_form(event,this)" data-id="5699013368610816"> 
+							<form action="https://getform.io/f/4b001a48-6b48-433b-887c-ffe86109b0f3" method="POST"> 
 								<fieldset> 
 									<div class="form-group"> 
 									<label class="control-label" for="name"><p>First Name</p> <span class="text-danger">*</span></label> 
@@ -39,9 +39,9 @@ const Layout = ({ image }) => {
 										</div> 
 									</div>  
 									<div class="form-group"> 
-									<label class="control-label" for="eb_temp_field_text_box"><p>Message</p> </label> 
+									<label class="control-label" for="message"><p>Message</p> </label> 
 										<div class="controls"> 
-											<textarea rows="3" data-ebay_field="" data-ebay_add_as="-- Select --" id="eb_temp_field_text_box" name="eb_temp_field_text_box" type="textarea" placeholder="Enter your message here" class="form-control"></textarea> 
+											<textarea rows="3" data-ebay_field="" data-ebay_add_as="-- Select --" id="message" name="message" type="textarea" placeholder="Enter your message here" class="form-control"></textarea> 
 										</div> 
 									</div> 
 									<div class="form-group"> 

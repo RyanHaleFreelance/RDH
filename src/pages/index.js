@@ -36,12 +36,6 @@ const WpPost = ({data}) => {
 			{/* <Quote></Quote> */}
 			<FormBlock image="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/austin-chan-ukzHlkoz1IE-unsplash.jpg"></FormBlock>
         </main>
-		<script src="https://d2p078bqz5urf7.cloudfront.net/jsapi/ehform.js?v1323133" />
-		<script
-          dangerouslySetInnerHTML={{ __html:
-            `var EhAPI = EhAPI || {}; EhAPI.after_load = function(){ EhAPI.set_account('8rh0iuu75o0bt2i1n1ps76dgbm', 'rdh'); EhAPI.execute('rules');};`
-          }}
-        />
         <Footer></Footer>
     </div>
   )
