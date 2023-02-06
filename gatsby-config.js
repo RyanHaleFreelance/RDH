@@ -21,6 +21,22 @@ module.exports = {
 		},
 	  },
 	},
+	{
+	resolve: `gatsby-plugin-google-gtag`,
+	options: {
+		trackingIds: [
+		"G-JZHSGW8FPW",
+		],
+		gtagConfig: {
+		anonymize_ip: true,
+		cookie_expires: 0,
+		send_page_view: true
+		},
+		pluginConfig: {
+		head: true,
+		},
+	},
+	},
 	`gatsby-plugin-react-helmet`,
 	{
 	  resolve: `gatsby-source-filesystem`,

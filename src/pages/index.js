@@ -14,8 +14,6 @@ import {Helmet} from "react-helmet";
 const WpPost = ({data}) => {
 	let noContainer = '';
 
-	let script = "var EhAPI = EhAPI || {}; EhAPI.after_load = function(){ EhAPI.set_account('8rh0iuu75o0bt2i1n1ps76dgbm', 'rdh'); EhAPI.execute('rules');};(function(d,s,f) { var sc=document.createElement(s);sc.type='text/javascript'; sc.async=true;sc.src=f;var m=document.getElementsByTagName(s)[0]; m.parentNode.insertBefore(sc,m); })(document, 'script', '//d2p078bqz5urf7.cloudfront.net/jsapi/ehform.js?v' + new Date().getHours());";
-
   return (
     <div>
       <Helmet>
@@ -43,7 +41,7 @@ const WpPost = ({data}) => {
 			<Cards></Cards>
 			<Partners></Partners>
 			<TwoCol title="Why we do it" image="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/smartmockups_ldrg3iu8.jpg" content="<p>We take pride in our attention to detail and commitment to customer satisfaction. Our team will work with you every step of the way to ensure that your website meets your requirements.</p><p>From initial consultations to final launch, we will be there to guide you through the process and ensure that your website is a success.</p>" link="#quote" linkText="Get a quote" flip={true} id="why-we-do-it"></TwoCol>
-			{/* <Quote></Quote> */}
+			<Quote></Quote>
 			<FormBlock image="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/austin-chan-ukzHlkoz1IE-unsplash.jpg"></FormBlock>
         </main>
         <Footer></Footer>

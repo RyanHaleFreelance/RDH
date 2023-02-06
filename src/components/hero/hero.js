@@ -6,9 +6,6 @@ import { Carousel } from 'react-responsive-carousel';
 import { useState } from "react"
 
 const Layout = ({ section, title, ratings }) => {
-	setTimeout(() => {
-		console.log(section);
-	}, 1000);
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const [auto, setAuto] = useState(true);
 	const [slideOne, setslideOne] = useState(true);
@@ -17,7 +14,6 @@ const Layout = ({ section, title, ratings }) => {
 
 	const updateCurrentSlide = (index) => {
 		setCurrentSlide(index);
-		console.log(currentSlide);
 
 		if(index == 0) {
 			setslideOne(true);
