@@ -7,8 +7,6 @@ import Headroom from 'react-headroom'
 import {Helmet} from "react-helmet";
 
 const Layout = ({ data }) => {
-
-	console.log(data);
 	const [expanded, setExpanded] = useState(false);
 
 	const toggleExpand = (elem) => {

@@ -34,7 +34,6 @@ const Layout = ({ section, images }) => {
 
 	function goToSlide(slide, cost, type, value) {
 		if (typeof window !== 'undefined') {
-			console.log(cost);
 			let item = document.getElementById('scrollable');
 			document.getElementById('slide' + slide).style.opacity = 1;
 			document.getElementById('slide' + slide).style.pointerEvents = "all";
@@ -113,7 +112,6 @@ const Layout = ({ section, images }) => {
 				if(element.dataset.required == 'true' && element.value == '') {
 					missing++;
 				} else {
-					console.log(element.id, element.value);
 					if(element.id == 'name') {
 						name = element.value;
 					} 
