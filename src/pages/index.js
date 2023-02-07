@@ -14,6 +14,9 @@ import {Helmet} from "react-helmet";
 const WpPost = ({data}) => {
 	let noContainer = '';
 
+	setTimeout(() => {
+
+	}, 1000);
   return (
     <div>
       <Helmet>
@@ -31,6 +34,7 @@ const WpPost = ({data}) => {
 		<link rel="mask-icon" href="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/safari-pinned-tab.svg" color="#5bbad5" />
 		<meta name="msapplication-TileColor" content="#da532c" />
 		<meta name="theme-color" content="#ffffff"></meta>
+		<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
       </Helmet>
         <Layout data={data.wpPage.seo}></Layout>
 		{

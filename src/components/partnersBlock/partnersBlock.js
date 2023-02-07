@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as Styles from './partnersBlock.module.scss'
 import c from 'classnames'
+import { Parallax } from 'react-parallax';
 
 const Layout = ({ section, images }) => {
 	return (
@@ -44,6 +45,7 @@ const Layout = ({ section, images }) => {
 					</div>
 				</div>
 				<div className={c("col col-md-1-2 align-text-center med-up", Styles.leftCol)}>
+					<Parallax style={{height: '100%'}} blur={0} bgImage="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/smartmockups_ldrfkosm.jpg" bgImageAlt="Background image" strength={100}></Parallax>
 				</div>
 			</div>
 		</div>

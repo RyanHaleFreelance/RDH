@@ -11,6 +11,7 @@
     margin-bottom: 40px;
     margin-top: 20px;
     text-align: center;
+    overflow: hidden;
 
     @media(min-width: $breakpoint-md) {
         padding: 50px 40px;
@@ -45,7 +46,8 @@
 .quoteInner {
     width: 100%;
     max-height: 600px;
-    overflow: auto;
+    overflow: visible;
+    transition: .6s cubic-bezier(.1,.57,.5,1);
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
     scroll-padding-top: 100px;
@@ -60,6 +62,7 @@
     pointer-events: none;
     height: 700px;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 .error {
@@ -77,6 +80,10 @@
         margin: 0 auto;
     }
 
+    .pt {
+        margin-top: 40px;
+    }
+    
     p {
         opacity: 0.7;
     }
@@ -152,6 +159,42 @@
             }
         }
     }
+}
+
+.shape1, .shape2, .shape3, .shape4 {
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    width: 90px;
+    height: 100px;
+    opacity: 0.7;
+    transform: rotate(20deg);
+}
+
+.shape2 {
+    left: 80px;
+    top: auto;
+    bottom: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+
+.shape3 {
+    left: auto;
+    top: auto;
+    right: 120px;
+    width: 120px;
+    height: 120px;
+}
+
+.shape4 {
+    left: auto;
+    top: auto;
+    right: 120px;
+    bottom: 40px;
+    width: 160px;
+    height: 160px;
 }
 
 .quoteItem {

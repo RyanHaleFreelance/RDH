@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as Styles from './twoColumn.module.scss'
 import c from 'classnames'
+import { Parallax } from 'react-parallax';
 
 const Layout = ({ title, image, content, link, linkText, flip, id }) => {
 
@@ -14,8 +15,8 @@ const Layout = ({ title, image, content, link, linkText, flip, id }) => {
 					<div className={c(Styles.colText)} dangerouslySetInnerHTML={{__html: content}}></div>
 					<a href={link} className="btn btn--small">{linkText}</a>
 				</div>
-				<div className={c(Styles.colOffset, 'rightColHelper')} style={{ backgroundImage: `url('${image}')`}}>
-				
+				<div className={c(Styles.colOffset, 'rightColHelper')}>
+					<Parallax style={{height: '100%'}} blur={0} bgImage={image} bgImageAlt="Background image" strength={100}></Parallax>
 				</div>
 			</div>
 		</div>

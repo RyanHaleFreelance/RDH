@@ -2,6 +2,7 @@ import * as React from 'react'
 import * as Styles from './quoteBuilder.module.scss'
 import c from 'classnames'
 import { useState } from "react"
+import { Parallax } from 'react-parallax';
 
 const Layout = ({ section, images }) => {
 	const [price, setPrice] = React.useState(1000);
@@ -20,17 +21,17 @@ const Layout = ({ section, images }) => {
 	const [innerpages, setinnerpages] = React.useState(false);
 	const [innerfeatures, setinnerfeatures] = React.useState(false);
 
-	setTimeout(() => {
-		if (typeof window !== 'undefined') {
-			document.querySelector('#scrollable').addEventListener('wheel', preventScroll, {passive: false});
+	// setTimeout(() => {
+	// 	if (typeof window !== 'undefined') {
+	// 		document.querySelector('#scrollable').addEventListener('wheel', preventScroll, {passive: false});
 
-			function preventScroll(e){
-				e.preventDefault();
-				e.stopPropagation();
-				return false;
-			}
-		}
-	}, 1000);
+	// 		function preventScroll(e){
+	// 			e.preventDefault();
+	// 			e.stopPropagation();
+	// 			return false;
+	// 		}
+	// 	}
+	// }, 1000);
 
 	function goToSlide(slide, cost, type, value) {
 		if (typeof window !== 'undefined') {
@@ -38,11 +39,7 @@ const Layout = ({ section, images }) => {
 			document.getElementById('slide' + slide).style.opacity = 1;
 			document.getElementById('slide' + slide).style.pointerEvents = "all";
 			let scroll = document.getElementById('slide' + slide).offsetTop;
-			item.scrollTo({
-				left: 0, 
-				top: scroll, 
-				behavior: 'smooth'
-			});
+			item.style.transform = 'translateY(-' + scroll + 'px)';
 		}
 
 		if(type == 'type') {
@@ -154,11 +151,24 @@ const Layout = ({ section, images }) => {
 
 	return (
 		<div id="quote" className={c('section container full shadow', Styles.quote)}>
+			<div className={Styles.shape1}>
+				<Parallax style={{position: 'static'}} bgImage="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/shapes3.svg" bgImageAlt="Background image" strength={10}></Parallax>
+			</div>
+			<div className={Styles.shape2}>
+				<Parallax style={{position: 'static'}} bgImage="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/shapes1red.svg" bgImageAlt="Background image" strength={50}></Parallax>
+			</div>
+			{/* <div className={Styles.shape3}>
+				<Parallax style={{position: 'static'}} bgImage="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/shapes2red.svg" bgImageAlt="Background image" strength={100}></Parallax>
+			</div> */}
+			<div className={Styles.shape4}>
+				<Parallax style={{position: 'static'}} bgImage="https://dev-rdhbackend.pantheonsite.io/wp-content/uploads/2023/02/Shapes4.svg" bgImageAlt="Background image" strength={50}></Parallax>
+			</div>
 			<div className={Styles.quoteInner} id="scrollable">
 				<div className={Styles.quoteInnerSlide} id="slide1">
 					<div className={Styles.quoteInnerTitle}>
 						<h2>How much could your project cost?</h2>
 						<p>Answer a few questions to get a rough estimate of how much your project could cost.</p>
+						<h3 className={Styles.pt}>What type of website are you wanting?</h3>
 					</div>
 					<div className={Styles.quoteInnerItems}>
 						<button onClick={() => goToSlide(2, 0, 'type', 'brochure')} className={Styles.quoteItem}>

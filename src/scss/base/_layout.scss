@@ -2199,17 +2199,29 @@ body .carousel.carousel-slider {
 
 .card1 .cardInnerWrapper {
     &:before {
-        content: 'Trustworthy' !important;
+        content: 'Experience' !important;
     }
 }
 
 .card2 .cardInnerWrapper {
     &:before {
-        content: 'Technology' !important;
+        content: 'Trust' !important;
+    }
+}
+
+.card2,.card4 {
+    @media(min-width: $breakpoint-lg) {
+        transform: translateY(20px);
     }
 }
 
 .card3 .cardInnerWrapper {
+    &:before {
+        content: 'Technology' !important;
+    }
+}
+
+.card4 .cardInnerWrapper {
     &:before {
         content: 'Personal' !important;
     }
@@ -2302,4 +2314,10 @@ body .container {
 #slide1 {
     opacity: 1;
     pointer-events: all;
+}
+
+.twoColumn-module--twoColContent--87b33 .react-parallax-bgimage {
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center;
 }
