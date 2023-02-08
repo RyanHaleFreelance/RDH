@@ -83,7 +83,7 @@
     .pt {
         margin-top: 40px;
     }
-    
+
     p {
         opacity: 0.7;
     }
@@ -169,6 +169,11 @@
     height: 100px;
     opacity: 0.7;
     transform: rotate(20deg);
+    display: none;
+
+    @media(min-width: $breakpoint-md) {
+        display: block;
+    }
 }
 
 .shape2 {
