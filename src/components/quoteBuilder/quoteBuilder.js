@@ -2,6 +2,7 @@ import * as React from 'react'
 import * as Styles from './quoteBuilder.module.scss'
 import c from 'classnames'
 import { useState } from "react"
+import axios from 'axios';
 import { Parallax } from 'react-parallax';
 
 const Layout = ({ section, images }) => {
@@ -13,13 +14,13 @@ const Layout = ({ section, images }) => {
 	const [features, setfeatures] = React.useState(0);
 	const [pages, setpages] = React.useState(0);
 
-	const [innerworktype, setinnerworktype] = React.useState(false);
-	const [innerrequired, setinnerrequired] = React.useState(false);
-	const [innercms, setinnercms] = React.useState(false);
-	const [innercmstype, setinnercmstype] = React.useState(false);
-	const [innerpayment, setinnerpayment] = React.useState(false);
-	const [innerpages, setinnerpages] = React.useState(false);
-	const [innerfeatures, setinnerfeatures] = React.useState(false);
+	const [innerworktype, setinnerworktype] = React.useState('');
+	const [innerrequired, setinnerrequired] = React.useState('');
+	const [innercms, setinnercms] = React.useState('');
+	const [innercmstype, setinnercmstype] = React.useState('');
+	const [innerpayment, setinnerpayment] = React.useState('');
+	const [innerpages, setinnerpages] = React.useState('');
+	const [innerfeatures, setinnerfeatures] = React.useState('');
 
 	// setTimeout(() => {
 	// 	if (typeof window !== 'undefined') {
@@ -32,6 +33,22 @@ const Layout = ({ section, images }) => {
 	// 		}
 	// 	}
 	// }, 1000);
+
+	const getData = (data) => {
+		axios.post('https:/dev-rdhbackend.pantheonsite.io/wp-json/wp/v2/posts/', data, {
+			headers: {
+				Authorization: "Basic cmRob3duZXJhZG1pbjpJcVZLIHp5NmYgQXd5cCA0d0pzIFhaTm0gUXlWMw=="
+			}
+		})
+		.then(function (response) {
+			console.log(response);
+		})
+		.catch(function (error) {
+			console.log(error.response);
+		})
+		.finally(function () {
+		});
+	};
 
 	function goToSlide(slide, cost, type, value) {
 		if (typeof window !== 'undefined') {
@@ -128,20 +145,34 @@ const Layout = ({ section, images }) => {
 			}
 			if(missing == 0) {
 				goToSlide(9);
-				window.gtag("event", "QUOTE SUBMISSION", {
-					website_type: innerworktype,
-					work_type: innerrequired,
-					cms_required: innercms,
-					cms_type: innercmstype,
-					payment_required: innerpayment,
-					features: innerfeatures,
-					extra_pages: innerpages,
-					name: name,
-					email: email,
-					phone: phone,
-					company: company,
-					website: website
-				});
+				var currentdate = new Date(); 
+				var datetime = "Form filled at: " + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+
+				let data = {
+					"status": "publish",
+					"title": datetime,
+					"acf": {
+						"name": name,
+						"email": email,
+						"phone": phone,
+						"company": company,
+						"website": website,
+						"website_type": innerworktype,
+						"work_type": innerrequired,
+						"cms_required": innercms,
+						"cms_preference": innercmstype,
+						"payment_required": innerpayment,
+						"features": innerfeatures,
+						"extra_pages": innerpages,
+						"price": "£" + String(price) + ".00"
+					}
+				}
+				getData(data);
 				document.getElementById('error').style.opacity = 0;
 			} else {
 				document.getElementById('error').style.opacity = 1;
