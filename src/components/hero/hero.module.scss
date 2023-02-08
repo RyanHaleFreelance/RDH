@@ -13,6 +13,12 @@
     margin-top: -60px;
     // cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.svg), auto
 
+    br {
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+
     @include respond-min($lg) {
         padding: 120px 0;
         margin-top: -86px;

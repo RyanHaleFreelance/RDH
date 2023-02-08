@@ -51,7 +51,7 @@ const Layout = ({ section, title, ratings }) => {
 						<div className={Styles.heroNumbers}>
 							<p><span id="current">02</span>/03</p>
 						</div>
-						<h2 className={Styles.pageHeaderTitle}>Fine tune your site and keep<br/>your customers <div class="redUnder redUnderEdit">coming back.</div></h2>
+						<h2 className={Styles.pageHeaderTitle}>Fine tune your site and keep <br/>your customers <div class="redUnder redUnderEdit">coming back.</div></h2>
 						<h3 className={Styles.actash2}>Let us design your user experience to make your users' experience a breeze. <br/>Happy customers equals more sales!</h3>
 						<a href="#contact" className="btn btn--trans btn--small">Let's Chat</a>
 					</div>
@@ -59,7 +59,7 @@ const Layout = ({ section, title, ratings }) => {
 						<div className={Styles.heroNumbers}>
 							<p><span id="current">03</span>/03</p>
 						</div>
-						<h2 className={Styles.pageHeaderTitle}>Signed, sealed and<br/>delivered. <div class="redUnder redUnderEdit">Securely.</div></h2>
+						<h2 className={Styles.pageHeaderTitle}>Signed, sealed and <br/>delivered. <div class="redUnder redUnderEdit">Securely.</div></h2>
 						<h3 className={Styles.actash2}>We use the latest tech to provide a seamless, safe experience <br/>for you and your user. Your brand's reputation is our brands reputation.</h3>
 						<a href="#contact" className="btn btn--trans btn--small">Let's Chat</a>
 					</div>
