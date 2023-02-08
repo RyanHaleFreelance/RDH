@@ -35,7 +35,7 @@ const Layout = ({ section, images }) => {
 	// }, 1000);
 
 	const getData = (data) => {
-		axios.post('https:/dev-rdhbackend.pantheonsite.io/wp-json/wp/v2/posts/', data, {
+		axios.post('https://dev-rdhbackend.pantheonsite.io/wp-json/wp/v2/posts/', data, {
 			headers: {
 				Authorization: "Basic cmRob3duZXJhZG1pbjpJcVZLIHp5NmYgQXd5cCA0d0pzIFhaTm0gUXlWMw=="
 			}
