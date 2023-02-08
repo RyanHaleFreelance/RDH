@@ -120,23 +120,27 @@
 
 .quoteInnerItems {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-
-    @media(min-width: $breakpoint-md) {
-        margin: 0 -20px;
-        justify-content: center;
-    }
+    margin: 0 -20px;
 
     ul {
         margin: 0;
         padding: 0;
         list-style-type: none;
         width: 100%;
-        max-width: 600px;
+        max-width: 270px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @media(min-width: 400px) {
+            max-width: 350px;
+        }
+
+        @media(min-width: $breakpoint-md) {
+            max-width: 600px;
+        }
 
         &.form {
             li {
@@ -204,10 +208,12 @@
 
 .quoteItem {
     display: block;
-    width: 100%;
+    width: calc(100% - 40px);
     padding: 20px;
     margin-bottom: 40px;
     max-width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
     // background-color: white;
     background: rgb(19,20,22);
     background: radial-gradient(circle, rgba(19,20,22,1) 0%, rgba(19,20,22,1) 40%, rgba(2,22,27,1) 100%);
@@ -239,8 +245,10 @@
 
 .quoteSmallItem {
     display: block;
-    width: calc(50% - 10px);
+    width: calc(50% - 40px);
     padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 40px;
     max-width: 300px;
     // background-color: white;
@@ -279,6 +287,7 @@
 
 .button {
     margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .styledCheckbox {
